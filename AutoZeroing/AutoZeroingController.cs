@@ -44,7 +44,12 @@ namespace Arys.AutoZeroing
 
         private bool HasALoadedChamber(Weapon weapon, out AmmoTemplate ammoTemplate)
         {
-            if (weapon.FirstLoadedChamberSlot?.ContainedItem.Template is AmmoTemplate)
+            if (weapon.IsBeltMachineGun && weapon.GetCurrentMagazineCount() > 0)
+            {
+                ammoTemplate = weapon.GetCurrentMagazine().FirstRealAmmo().Template as AmmoTemplate;
+                return true;
+            }
+            else if (weapon.FirstLoadedChamberSlot?.ContainedItem.Template is AmmoTemplate)
             {
                 ammoTemplate = weapon.FirstLoadedChamberSlot.ContainedItem.Template as AmmoTemplate;
                 return true;
