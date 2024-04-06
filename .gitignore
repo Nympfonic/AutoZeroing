@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/AutoZeroing/References/0Harmony.dll
+/AutoZeroing/References/Aki.Reflection.dll
+/AutoZeroing/References/Assembly-CSharp.dll
+/AutoZeroing/References/Comfort.dll
+/AutoZeroing/References/Mono.Cecil.dll
+/global.json
