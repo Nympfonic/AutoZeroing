@@ -1,4 +1,5 @@
-﻿using BepInEx;
+﻿using Arys.AutoZeroing.Patches;
+using BepInEx;
 using BepInEx.Logging;
 
 namespace Arys.AutoZeroing
